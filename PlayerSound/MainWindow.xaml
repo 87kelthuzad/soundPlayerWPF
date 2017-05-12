@@ -1,0 +1,74 @@
+﻿<Window x:Class="PlayerSound.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PlayerSound"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="385" Width="525">
+    <Grid Margin="0,0,0,-1" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="517">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Button x:Name="pause" HorizontalAlignment="Left" Height="38" Margin="37,257,0,0" VerticalAlignment="Top" Width="90" Click="pause_Click">
+            <StackPanel>
+                <Image Source="C:\Users\mateusz\Documents\Visual Studio 2017\Backup Files\PlayerSound\pause.png" Stretch="Uniform" Height="33" Width="22"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="play" HorizontalAlignment="Left" Height="38" Margin="132,257,0,0" VerticalAlignment="Top" Width="90" Click="play_Click">
+            <StackPanel>
+                <Image Source="C:\Users\mateusz\Documents\Visual Studio 2017\Backup Files\PlayerSound\play.png" Stretch="Uniform" Height="33" Width="22"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="stop" HorizontalAlignment="Left" Height="38" Margin="227,257,0,0" VerticalAlignment="Top" Width="90" Click="stop_Click">
+            <StackPanel>
+                <Image Source="C:\Users\mateusz\Documents\Visual Studio 2017\Backup Files\PlayerSound\stop.png" Stretch="Uniform" Height="33" Width="22"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="list" HorizontalAlignment="Left" Height="38" Margin="417,257,0,0" VerticalAlignment="Top" Width="90" Click="list_Click">
+            <StackPanel>
+                <Image Source="C:\Users\mateusz\Documents\Visual Studio 2017\Backup Files\PlayerSound\menu.png" Stretch="Uniform" Height="33" Width="22"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="previous" HorizontalAlignment="Left" Height="38" Margin="37,300,0,0" VerticalAlignment="Top" Width="90">
+            <StackPanel>
+                <Image Source="C:\Users\mateusz\Documents\Visual Studio 2017\Backup Files\PlayerSound\previous.png" Stretch="Uniform" Height="33" Width="22"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="next" HorizontalAlignment="Left" Height="38" Margin="132,300,0,0" VerticalAlignment="Top" Width="90">
+            <StackPanel>
+                <Image Source="C:\Users\mateusz\Documents\Visual Studio 2017\Backup Files\PlayerSound\next.png" Stretch="Uniform" Height="33" Width="22"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="mute" HorizontalAlignment="Left" Height="38" Margin="322,300,0,0" VerticalAlignment="Top" Width="90" Click="mute_Click">
+            <StackPanel>
+                <Image Source="C:\Users\mateusz\Documents\Visual Studio 2017\Backup Files\PlayerSound\mute.png" Stretch="Uniform" Height="33" Width="22"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="volume" HorizontalAlignment="Left" Height="38" Margin="417,300,0,0" VerticalAlignment="Top" Width="90" Click="volume_Click">
+            <StackPanel>
+                <Image Source="C:\Users\mateusz\Documents\Visual Studio 2017\Backup Files\PlayerSound\volume.png" Stretch="Uniform" Height="33" Width="22"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="openFile" HorizontalAlignment="Left" Height="81" Margin="0,257,0,0" VerticalAlignment="Top" Width="32" Click="openFile_Click">
+            <StackPanel>
+                <Image Source="C:\Users\mateusz\Documents\Visual Studio 2017\Backup Files\PlayerSound\headphones.png" Stretch="Uniform" Height="33" Width="22"/>
+            </StackPanel>
+        </Button>
+        <Label x:Name="Status" Content="Not playing" HorizontalAlignment="Left" Height="53" Margin="196,189,0,0" VerticalAlignment="Top" Width="183" RenderTransformOrigin="0.503,0.497"/>
+        <StackPanel HorizontalAlignment="Left" Height="38" Margin="417,300,0,0" VerticalAlignment="Top" Width="90"/>
+
+    </Grid>
+</Window>

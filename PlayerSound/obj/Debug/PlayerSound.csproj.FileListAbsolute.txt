@@ -1,0 +1,16 @@
+c:\users\mateusz\documents\visual studio 2017\Projects\PlayerSound\PlayerSound\bin\Debug\PlayerSound.exe.config
+c:\users\mateusz\documents\visual studio 2017\Projects\PlayerSound\PlayerSound\bin\Debug\PlayerSound.exe
+c:\users\mateusz\documents\visual studio 2017\Projects\PlayerSound\PlayerSound\bin\Debug\PlayerSound.pdb
+c:\users\mateusz\documents\visual studio 2017\Projects\PlayerSound\PlayerSound\obj\Debug\PlayerSound.csprojResolveAssemblyReference.cache
+c:\users\mateusz\documents\visual studio 2017\Projects\PlayerSound\PlayerSound\obj\Debug\MainWindow.g.cs
+c:\users\mateusz\documents\visual studio 2017\Projects\PlayerSound\PlayerSound\obj\Debug\App.g.cs
+c:\users\mateusz\documents\visual studio 2017\Projects\PlayerSound\PlayerSound\obj\Debug\PlayerSound_MarkupCompile.cache
+c:\users\mateusz\documents\visual studio 2017\Projects\PlayerSound\PlayerSound\obj\Debug\PlayerSound_MarkupCompile.lref
+c:\users\mateusz\documents\visual studio 2017\Projects\PlayerSound\PlayerSound\obj\Debug\MainWindow.baml
+c:\users\mateusz\documents\visual studio 2017\Projects\PlayerSound\PlayerSound\obj\Debug\PlayerSound.g.resources
+c:\users\mateusz\documents\visual studio 2017\Projects\PlayerSound\PlayerSound\obj\Debug\PlayerSound.Properties.Resources.resources
+c:\users\mateusz\documents\visual studio 2017\Projects\PlayerSound\PlayerSound\obj\Debug\PlayerSound.csproj.GenerateResource.Cache
+c:\users\mateusz\documents\visual studio 2017\Projects\PlayerSound\PlayerSound\obj\Debug\PlayerSound.exe
+c:\users\mateusz\documents\visual studio 2017\Projects\PlayerSound\PlayerSound\obj\Debug\PlayerSound.pdb
+C:\Users\mateusz\documents\visual studio 2017\Projects\PlayerSound\PlayerSound\obj\Debug\Window1.g.cs
+C:\Users\mateusz\documents\visual studio 2017\Projects\PlayerSound\PlayerSound\obj\Debug\Window1.baml
