@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PlayerSound"
         mc:Ignorable="d"
-        Title="MainWindow" Height="385" Width="525">
+        Title="MainWindow" Height="600" Width="525">
     <Grid Margin="0,0,0,-1" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="517">
         <Grid.RenderTransform>
             <TransformGroup>
@@ -69,6 +69,7 @@
         </Button>
         <Label x:Name="Status" Content="Not playing" HorizontalAlignment="Left" Height="53" Margin="196,189,0,0" VerticalAlignment="Top" Width="183" RenderTransformOrigin="0.503,0.497"/>
         <StackPanel HorizontalAlignment="Left" Height="38" Margin="417,300,0,0" VerticalAlignment="Top" Width="90"/>
+        <ListBox x:Name="playListMp3" HorizontalAlignment="Left" Height="195" Margin="10,355,0,0" VerticalAlignment="Top" Width="497" SelectionChanged="playListMp3_SelectionChanged"/>
 
     </Grid>
 </Window>

@@ -8,7 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-///using System.Windows.Forms;
+//using System.Windows.Forms;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using Microsoft.Win32;
 using System.Windows.Threading;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace PlayerSound
 {
@@ -26,11 +27,13 @@ namespace PlayerSound
     {
 
         private MediaPlayer mediaPlayer = new MediaPlayer();
-
+        private string mediaPath;
 
         public MainWindow()
         {
             InitializeComponent();
+            //List<string> safePlayList = new List<string>();
+            
 
 
             DispatcherTimer timer = new DispatcherTimer();
@@ -38,6 +41,7 @@ namespace PlayerSound
             timer.Tick += timer_Tick;
             timer.Start();
         }
+
 
         private void list_Click(object sender, RoutedEventArgs e)
         {
@@ -47,33 +51,47 @@ namespace PlayerSound
 
         private void openFile_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
+            OpenFileDialog openFile = new OpenFileDialog();
             /// OpenFileDialog openFileDialog = new OpenFileDialog();
             //openFileDialog.AddExtension = true;
-            openFileDialog.Filter = "MP3 files (*.mp3)|*.mp3| All files (*.*)|*.*";
+            openFile.DefaultExt = ".mp3";
+            openFile.Filter = "MP3 files (*.mp3)|*.mp3| All files (*.*)|*.*";
+            openFile.Multiselect = true;
            // openFileDialog.ShowDialog();
             ///try { MediaPlayer.Source = new Uri(openFileDialog.FileName); }
             //catch { new NullReferenceException("Error"); }
-
-            if (openFileDialog.ShowDialog() == true )
+            
+            if (openFile.ShowDialog() == true )
             {
-                mediaPlayer.Open(new Uri(openFileDialog.FileName));
-                //mediaPlayer.Play();
+                //mediaPlayer.Open(new Uri(openFile.FileName));
+                //MediaPlayer.Source = new Uri(openFile.SafeFileName);
+                for (int i = 0; i < openFile.FileNames.Length; ++i)
+                {
+                    playListMp3.Items.Add(openFile.FileNames[i].ToString());
+                }
                 
+                //mediaPlayer.Play()
+                //playListMp3.Items.Add();
             }
+
         }
         void timer_Tick(object sender, EventArgs e)
         {
-            if (mediaPlayer.Source != null)
-                Status.Content = String.Format("{0} / {1}", mediaPlayer.Position.ToString(@"mm\:ss"), mediaPlayer.NaturalDuration.TimeSpan.ToString(@"mm\:ss"));
+            if (mediaPlayer.Source != null) { }
+            // Status.Content = String.Format("{0} / {1}", mediaPlayer.Position.ToString(@"mm\:ss"), mediaPlayer.NaturalDuration.TimeSpan.ToString(@"mm\:ss"));
             else
-               Status.Content = "No file selected...";
+                Status.Content = "No file selected...";
         }
 
         private void play_Click(object sender, RoutedEventArgs e)
         {
-            mediaPlayer.Play();
+            //mediaPlayer.Play();
             ///MediaElement.Play();
+            mediaPlayer.Stop();
+            //string mediaPath = ((ListBoxItem)playListMp3.SelectedValue).Content.ToString();
+            mediaPath = playListMp3.SelectedItem.ToString();
+            mediaPlayer.Open(new Uri(mediaPath));
+            mediaPlayer.Play();
         }
 
         private void stop_Click(object sender, RoutedEventArgs e)
@@ -83,6 +101,7 @@ namespace PlayerSound
 
         private void pause_Click(object sender, RoutedEventArgs e)
         {
+            
             mediaPlayer.Pause();
         }
 
@@ -96,6 +115,11 @@ namespace PlayerSound
         {
             mediaPlayer.Volume += 2;
             mute.Content = "Listen";
+        }
+
+        private void playListMp3_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
         }
     }
 
